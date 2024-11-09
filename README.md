@@ -193,6 +193,20 @@ Cada endpoint incluye la descripción y el detalle de los parámetros de entrada
 - `500`: error interno del servidor. (Avisar a los TAs ⚠️)
 - `404`: producto no encontrado.
 
+### Comprar items del carrito (`POST /buy`) 🔐
+
+| Campo              | Tipo     | Requerido | Descripción                             |
+|--------------------|----------|-----------|-----------------------------------------|
+| `userId`           | String   | Sí        | ID del usuario                          |
+
+**Respuesta exitosa (200):** `{ "message": "Items bought successfully." }`
+
+**Respuestas de error:**
+
+- `400`: campos faltantes o json inválidos.
+- `500`: error interno del servidor. (Avisar a los TAs 🚨)
+- `404`: carrito o usuario no encontrado.
+
 ### Obtener el carrito de un usuario (`GET /cart/{userId}`) 🔐
 
 | Parámetro          | Tipo     | Descripción                             |
